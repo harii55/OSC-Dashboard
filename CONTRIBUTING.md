@@ -115,6 +115,25 @@ Navigate to `http://localhost:5173`
 
 ---
 
+## Next Steps: Contribute Your Changes
+
+1. **Fork the repository** (if you haven't already)
+2. **Create a feature branch**:
+  ```bash
+  git checkout -b feature-name
+  ```
+3. **Commit your changes**:
+  ```bash
+  git commit -am 'Add feature'
+  ```
+4. **Push to your branch**:
+  ```bash
+  git push origin feature-name
+  ```
+5. **Submit a pull request** via GitHub
+
+---
+
 ## Development Guidelines
 
 ### Code Standards
