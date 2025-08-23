@@ -35,11 +35,7 @@ export async function upsertUserToDB(user) {
         const { error } = await supabase.from('users').insert(insert);
         if (error) console.error('Error inserting user:', error);
         else console.log('User inserted successfully:', insert);
-    } else {
-        // Optionally update is_active/updated_at for existing user
-        const { error } = await supabase.from('users').update({ is_active: true, updated_at }).eq('email', email);
-        if (error) console.error('Error updating user:', error);
-    }
+    } 
 }
 
 export function useUpsertUser(user) {
