@@ -1,12 +1,63 @@
-# React + Vite
+# OSC Leaderboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A premium dark-themed leaderboard for tracking Open Source Club (OSC) member contributions. Built with React, Supabase, and modern web technologies.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔐 **GitHub Authentication**: Simple and secure GitHub OAuth login  
+🎨 **Premium Dark Theme**: Elegant glassmorphism design with smooth animations  
+📊 **Real-time Stats**: Track total members, PRs, and active contributors  
+🏆 **Leaderboard**: Beautiful ranking system with trophy icons for top performers  
+📱 **Responsive Design**: Works perfectly on desktop, tablet, and mobile devices  
+⚡ **Fast & Modern**: Built with React 19, Vite, and Supabase  
+🔔 **Toast Notifications**: Interactive notification system for user feedback
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend**: React 19, CSS3 with custom properties, Vite
+- **Authentication**: Supabase GitHub OAuth
+- **Database**: Supabase (PostgreSQL)
+- **Routing**: React Router DOM
+- **Icons**: Lucide React
+- **Styling**: Custom CSS with glassmorphism effects
+
+## Project Structure
+
+```
+src/
+├── api/
+│   └── supabaseClient.js      # Supabase configuration
+├── components/
+│   └── ToastContainer.jsx     # Toast notifications
+├── hooks/
+│   ├── useAuth.js             # GitHub authentication logic
+│   ├── useToast.js            # Toast notification hook
+│   └── useUpsertUser.js       # User database operations
+├── pages/
+│   ├── Home.jsx               # Main dashboard with leaderboard
+│   └── Login.jsx              # GitHub login page
+└── utils/                     # Utility functions (empty)
+```
+
+## Key Components
+
+- **Dashboard**: Real-time stats, user management, leaderboard table
+- **Authentication**: GitHub OAuth with session management
+- **User Management**: Automatic user data sync to database
+- **Responsive UI**: Mobile-first design with smooth animations
+
+## Contributing
+
+Want to contribute? Check out our [CONTRIBUTING.md](CONTRIBUTING.md) for setup instructions and development guidelines.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Support
+
+For support, create an issue in the repository or contact the OSC team.
+
+---
+
+**Built with ❤️ for the Open Source Club**
