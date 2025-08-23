@@ -96,31 +96,32 @@ function Home({ user, signOut }) {
             <span>OSC Leaderboard</span>
           </div>
           <div className="user-section">
-            <div className="user-info">
-              <div className="user-avatar">
-                <img
-                  src={
-                    user?.user_metadata?.avatar_url ||
-                    `https://ui-avatars.com/api/?name=${
-                      user?.user_metadata?.full_name || "User"
-                    }&background=6366f1&color=ffffff`
-                  }
-                  alt="User"
-                />
-              </div>
-              <div className="user-details">
-                <div className="user-name">
-                  {user?.user_metadata?.full_name ||
-                    user?.user_metadata?.user_name ||
-                    "User"}
-                </div>
-                <div className="user-email">{user?.email}</div>
-              </div>
-            </div>
             <button className="sign-out-btn" onClick={signOut}>
-              <LogOut size={14} />
+              <LogOut size={16} />
               Sign out
             </button>
+            <div className="user-avatar" style={{ marginLeft: 16 }}>
+              <img
+                src={
+                  user?.user_metadata?.avatar_url
+                    ? user.user_metadata.avatar_url
+                    : `https://ui-avatars.com/api/?name=${
+                        user?.user_metadata?.full_name ||
+                        user?.user_metadata?.user_name ||
+                        "User"
+                      }&background=6366f1&color=ffffff&size=40`
+                }
+                alt="User"
+              />
+            </div>
+            <div className="user-details">
+              <div className="user-name">
+                {user?.user_metadata?.full_name ||
+                  user?.user_metadata?.user_name ||
+                  "User"}
+              </div>
+              <div className="user-email">{user?.email}</div>
+            </div>
           </div>
         </div>
       </div>
@@ -192,12 +193,9 @@ function Home({ user, signOut }) {
                         <div className="member-info">
                           <div className="member-avatar">
                             <img
-                              src={
-                                user?.user_metadata?.avatar_url ||
-                                `https://ui-avatars.com/api/?name=${
-                                  u.full_name || u.username || "User"
-                                }&background=6366f1&color=ffffff`
-                              }
+                              src={`https://ui-avatars.com/api/?name=${
+                                u.full_name || u.username || "User"
+                              }&background=6366f1&color=ffffff&size=48`}
                               alt={u.full_name || u.username}
                             />
                           </div>
